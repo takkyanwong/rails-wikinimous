@@ -1,0 +1,18 @@
+<h1 class="mb-3"><%= @article.title  %></h1>
+
+<blockquote>
+  <p><%= @article.content %></p>
+</blockquote>
+
+<%= link_to article_path(@article),
+method: :delete,
+data: { confirm: "Are you sure?" }, class: 'btn btn-danger' do %>
+  <i class="far fa-trash-alt"></i> Delete
+<% end %>
+
+<%= link_to edit_article_path(@article), class: 'btn btn-warning' do %>
+  Edit
+<% end %>
+
+
+<%= link_to '< Back to the article list', articles_path, class: 'link-all-articles' %></p>
